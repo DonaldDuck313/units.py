@@ -1,5 +1,5 @@
 # units.py
-Units.py is a Python library that makes it easy to work with units in physics without having to worry about unit conversions. For example, if you have an energy in electronvolts and you have the value of Planck's constant in Joules times seconds, normally you would have to convert one of those values into different units. But with units.py, you don't have to do that. You can easily multiply two values in different units and get the correct result.
+Units.py is a Python library that makes it easy to work with units in physics without having to worry about unit conversions. For example, if you have an energy in electronvolts and you have the value of Planck's constant in Joules times seconds, normally you would have to convert one of those values to match the units of the other one. But with units.py, you don't have to do that. You can easily multiply two values in different units and get the correct result.
 
 # Setup
 To start using units.py, download the file and save it in the same folder as your Python code. Then add this line to the beginning of your Python code:
