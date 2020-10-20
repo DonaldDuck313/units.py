@@ -699,6 +699,8 @@ Gy = J / kg
 Sv = Gy
 mol = Unit(6.02214076e23)
 degree = degrees = Unit(pi / 180)
+arcmin = Unit(degree / 60)
+arcsec = Unit(degree / 3600)
 radian = dimensionless
 
 cm = Unit(1e-2 * m)
