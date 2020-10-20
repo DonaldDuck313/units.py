@@ -60,7 +60,15 @@ You can also add SI prefixes before some of these units to get multiples of them
 ### Angles and dimensionless quantities
 Units.py also provides a `dimensionless` unit in order to represent [dimensionless quantities](https://en.wikipedia.org/wiki/Dimensionless_quantity). A `Quantity` object with the `dimensionless` unit is meant to work exactly like an object of Python's built-in `float` type.
 
-For angles, there is also a `radians` unit, which is simply an alias of `dimensionless`, and a `degrees` unit, where `1 * units.degrees` is equal to `pi / 180 * units.radians`.
+For angles, there is also a `radians` unit, which is simply an alias of `dimensionless`, and a `degrees` unit, where `1 * units.degrees` is equal to `pi / 180 * units.radians`. That way, you can easily specify angles in degrees, and for example pass that as an argument to trigonometric functions like `numpy.sin`, for example
+
+```
+import units
+import numpy
+print(numpy.sin(90 * units.degree))    #Result: 1.0
+```
+
+There is also `units.arcmin` and `units.arcsec`, representing arcminutes and arcseconds respectively.
 
 ### Temperatures
 Units.py stores temperatures in Kelvins, and can't store temperatures in Celsius. However, it defines `Quantity` object named `zeroCelsius` equal to the value of 0 Celsius in Kelvin, which can be used to convert between Kelvin and Celsius. If you have a temperature in Celsius, add `zeroCelsius` to get the temperature in Kelvin, and if you have a temperature in Kelvin, subtract `zeroCelsius` to get the temperature in Celsius. Example:
