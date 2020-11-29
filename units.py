@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
-
+"""
+Created on Sat Oct 12 12:09:58 2019
+@author: glind
+"""
 from fractions import Fraction as _Fraction
 from unicodedata import lookup as _unicode
 from numpy.core.numeric import isclose as _isclose
@@ -170,7 +173,9 @@ class Unit:
         return str(this)
     
     def __str__(this):
-        if(this == t):
+        if(this == dimensionless):
+            return "1"
+        elif(this == t):
             return "t"
         elif(this == minute):
             return "min"
@@ -779,8 +784,16 @@ KJ = josephsonConstant = 2 * e / h
 RK = vonKlitzingConstant = h / e**2
 magneticFluxQuantum = 1 / josephsonConstant
 stefanBoltzmannConstant = Quantity(5.670373e-8, W / (m**2 * K**4))
-fineStructureConstant = 7.2973525693e-3
+
+fineStructureConstant = alphaElectromagnetic = 7.2973525693e-3
+alphaStrong = 0.1179
+alphaWeak = 1/30
+gElectromagnetic = (4 * pi * alphaElectromagnetic) ** (1/2)
+gStrong = (4 * pi * alphaStrong) ** (1/2)
+gWeak = (4 * pi * alphaWeak) ** (1/2)
+
 cabibboAngle = Quantity(13.02, degree)
+weakMixingAngle = Quantity(28.2, degree)
 electronMass = me = Quantity(9.1093837015e-31, kg)
 protonMass = mp = Quantity(1.67262192369e-27, kg)
 neutronMass = mn = Quantity(1.674927351e-27, kg)
