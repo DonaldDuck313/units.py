@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sat Oct 12 12:09:58 2019
-@author: glind
-"""
+
 from fractions import Fraction as _Fraction
 from unicodedata import lookup as _unicode
 from numpy.core.numeric import isclose as _isclose
