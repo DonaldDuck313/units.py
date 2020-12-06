@@ -745,6 +745,15 @@ nA = Unit(1e-9 * A)
 pA = Unit(1e-12 * A)
 fA = Unit(1e-15 * A)
 
+mF = Unit(1e-3 * F)
+µF = microFarad = Unit(1e-6 * F)
+nF = Unit(1e-9 * F)
+pF = Unit(1e-12 * F)
+
+mOhm = milliOhm = Unit(1e-3 * Ohm)
+kOhm = kiloOhm = Unit(1e3 * Ohm)
+MOhm = megaOhm = Unit(1e6 * Ohm)
+
 ms = Unit(1e-3 * s)
 µs = microsecond = Unit(1e-6 * s)
 ns = Unit(1e-9 * s)
